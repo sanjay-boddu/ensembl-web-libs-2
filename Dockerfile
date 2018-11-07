@@ -4,4 +4,6 @@ WORKDIR ${ENSEMBL_SOFTWARE_DEPENDENCIES_LOCATION}/linuxbrew-automation
 
 USER www
 
-RUN source ${HOME}/.bashrc && /bin/bash -c "time source 02-additional-libraries.sh"
+RUN source ${HOME}/.bashrc \ 
+    && /bin/bash -c "time source 02-additional-libraries.sh" \
+    && rm ${HOME}/.cache/Homebrew/downloads/* 
