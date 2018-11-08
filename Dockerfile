@@ -6,4 +6,4 @@ USER www
 
 RUN source ${HOME}/.bashrc \ 
     && /bin/bash -c "time source 02-additional-libraries.sh" \
-    && rm ${HOME}/.cache/Homebrew/downloads/* 
+    && rm -r ${HOME}/.cache/Homebrew/downloads/* 
